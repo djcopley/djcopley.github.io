@@ -33,17 +33,11 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18
-      - name: Run npm build
+      - name: Run npm ci, build, and test
         run: |
           npm ci
           npm run build
-      - name: Build with Jekyll
-        uses: actions/jekyll-build-pages@v1
-        with:
-          source: ./build
-          destination: ./_site
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+          npm test
 
   # Deployment job
   deploy:
@@ -53,6 +47,8 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v1
+      - name: Deploy to github pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          publish_dir: ./build  
