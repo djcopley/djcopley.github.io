@@ -33,8 +33,8 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18
-      - name: Run npm run build
-        run: npm build
+      - name: Run npm build
+        run: npm run build
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
