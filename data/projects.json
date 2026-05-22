@@ -1,0 +1,11 @@
+[
+  { "repo": "ShellOracle",      "blurb": "A terminal utility for intelligent shell command generation." },
+  { "repo": "QuineMcCluskey",   "blurb": "A powerful tool for minimizing Boolean functions." },
+  { "repo": "hatch-uvenv",      "blurb": "Use uv locked environments with Hatch." },
+  { "repo": "import-rewriter",  "blurb": "Dynamically rewrite Python imports at runtime." },
+  { "repo": "hatch-minify",     "blurb": "Hatch build hook for minifying python binary distributions." },
+  { "repo": "zing",             "blurb": "Simple gRPC messaging CLI written in Go." },
+  { "repo": "vga_module",       "blurb": "VHDL VGA-Display Module." },
+  { "repo": "8bitproc",         "blurb": "An 8-bit microprocessor implemented in SystemVerilog." },
+  { "repo": "djcopley.github.io", "blurb": "This site — a personal site as a retro OS desktop." }
+]

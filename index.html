@@ -1,3 +1,35 @@
----
-layout: home
----
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Daniel Copley</title>
+  <meta name="description" content="Personal site of Daniel Copley — engineer, builder, tinkerer." />
+  <link rel="icon" href="favicon.ico" />
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/win95.css" />
+  <link rel="stylesheet" href="css/desktop.css" />
+  <link rel="stylesheet" href="css/mobile.css" />
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js" defer></script>
+  <script type="module" src="js/main.js" defer></script>
+</head>
+<body>
+  <div id="desktop"></div>
+  <div id="start-menu"></div>
+  <div id="taskbar">
+    <button id="start-btn" class="btn"></button>
+    <div id="taskbar-windows"></div>
+    <div id="taskbar-tray">--:--</div>
+  </div>
+
+  <main id="mobile"></main>
+
+  <noscript>
+    <div style="padding:16px;background:#fff;color:#000;font-family:sans-serif">
+      <h1>Daniel Copley</h1>
+      <p>This site needs JavaScript. Find me on
+        <a href="https://github.com/djcopley">GitHub</a>.</p>
+    </div>
+  </noscript>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>404 - Daniel Copley</title>
+  <link rel="icon" href="favicon.ico" />
+  <link rel="stylesheet" href="/css/reset.css" />
+  <link rel="stylesheet" href="/css/win95.css" />
+  <style>
+    body { background: #008080; height: 100vh; display: flex; align-items: center; justify-content: center; }
+    .err-win { position: relative; width: min(420px, 92vw); }
+  </style>
+</head>
+<body>
+  <div class="err-win win focused" style="position: relative">
+    <div class="win-titlebar">
+      <span class="win-title-text">Windows</span>
+      <div class="win-titlebar-buttons"><button onclick="location.href='/'">×</button></div>
+    </div>
+    <div class="win-body" style="padding:20px;display:flex;gap:16px;align-items:flex-start">
+      <div style="font-size:32px;line-height:1">⚠️</div>
+      <div>
+        <p style="font-size:13px;line-height:1.4">A page was not found at the requested location.</p>
+        <p style="font-size:13px;line-height:1.4;margin-top:8px">The application will be terminated.</p>
+        <div style="margin-top:14px;text-align:center"><a class="btn" href="/" style="text-decoration:none;display:inline-block">OK</a></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

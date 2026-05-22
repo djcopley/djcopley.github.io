@@ -1,0 +1,243 @@
+html, body {
+  background: var(--bg);
+  overflow: hidden;
+  height: 100%;
+}
+
+#desktop {
+  position: fixed;
+  inset: 0 0 28px 0;
+  overflow: hidden;
+}
+
+.desktop-icons {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-rows: repeat(auto-fill, 80px);
+  gap: 4px;
+  padding: 8px;
+  align-content: start;
+  justify-content: start;
+  height: 100%;
+}
+.desktop-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80px;
+  padding: 4px;
+  color: #fff;
+  text-shadow: 1px 1px 0 #000;
+  cursor: pointer;
+  font-size: 12px;
+  text-align: center;
+  user-select: none;
+}
+.desktop-icon img, .desktop-icon svg {
+  width: 32px;
+  height: 32px;
+  image-rendering: pixelated;
+  margin-bottom: 4px;
+}
+.desktop-icon.selected, .desktop-icon:focus {
+  outline: 1px dotted #fff;
+}
+.desktop-icon.selected .label-bg {
+  background: var(--title);
+  padding: 1px 2px;
+}
+
+/* Taskbar */
+#taskbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 28px;
+  background: var(--chrome);
+  border-top: 2px solid var(--chrome-lightest);
+  display: flex;
+  align-items: center;
+  padding: 2px;
+  gap: 4px;
+  z-index: 10000;
+}
+#start-btn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 6px;
+  font-weight: bold;
+  font-size: 12px;
+  height: 22px;
+}
+#start-btn img, #start-btn svg { width: 16px; height: 16px; }
+
+#taskbar-windows {
+  flex: 1;
+  display: flex;
+  gap: 4px;
+  overflow: hidden;
+}
+.taskbar-window {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 6px;
+  height: 22px;
+  background: var(--chrome);
+  border-top: 1px solid var(--chrome-lightest);
+  border-left: 1px solid var(--chrome-lightest);
+  border-right: 1px solid var(--chrome-darker);
+  border-bottom: 1px solid var(--chrome-darker);
+  cursor: pointer;
+  min-width: 100px;
+  max-width: 180px;
+  font-size: 12px;
+  overflow: hidden;
+}
+.taskbar-window .label {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.taskbar-window svg, .taskbar-window img { width: 14px; height: 14px; flex: 0 0 14px; }
+.taskbar-window.active {
+  border-top: 1px solid var(--chrome-darker);
+  border-left: 1px solid var(--chrome-darker);
+  border-right: 1px solid var(--chrome-lightest);
+  border-bottom: 1px solid var(--chrome-lightest);
+  background:
+    repeating-linear-gradient(45deg, transparent 0 2px, rgba(255,255,255,0.4) 2px 4px),
+    var(--chrome);
+}
+
+#taskbar-tray {
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+  height: 22px;
+  border-top: 1px solid var(--chrome-darker);
+  border-left: 1px solid var(--chrome-darker);
+  border-right: 1px solid var(--chrome-lightest);
+  border-bottom: 1px solid var(--chrome-lightest);
+  background: var(--chrome);
+  font-size: 12px;
+  min-width: 70px;
+  justify-content: center;
+}
+
+/* Start menu */
+#start-menu {
+  position: fixed;
+  bottom: 28px;
+  left: 2px;
+  width: 200px;
+  background: var(--chrome);
+  border-top: 2px solid var(--chrome-lightest);
+  border-left: 2px solid var(--chrome-lightest);
+  border-right: 2px solid var(--chrome-darker);
+  border-bottom: 2px solid var(--chrome-darker);
+  box-shadow: 1px 1px 0 var(--chrome-darker);
+  display: none;
+  z-index: 9999;
+  padding: 2px;
+}
+#start-menu.open { display: flex; }
+#start-menu .start-banner {
+  background: var(--title);
+  color: #fff;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  padding: 8px 4px;
+  font-weight: bold;
+  font-size: 18px;
+  flex: 0 0 24px;
+  text-align: right;
+}
+#start-menu .start-banner span { color: #fff; }
+#start-menu .start-banner span b { color: #fff; font-weight: 900; font-style: italic; }
+#start-menu ul {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+#start-menu li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 8px;
+  cursor: pointer;
+  font-size: 13px;
+}
+#start-menu li:hover { background: var(--title); color: #fff; }
+#start-menu li img, #start-menu li svg { width: 24px; height: 24px; }
+#start-menu li.sep { height: 1px; padding: 0; border-top: 1px solid var(--chrome-darker); border-bottom: 1px solid var(--chrome-lightest); margin: 4px 2px; }
+
+/* Terminal */
+.terminal {
+  background: #000;
+  color: #c0c0c0;
+  font-family: "Consolas", "Courier New", monospace;
+  font-size: 13px;
+  padding: 8px;
+  height: 100%;
+  overflow-y: auto;
+  white-space: pre-wrap;
+  line-height: 1.4;
+}
+.terminal .prompt { color: #ffffff; }
+.terminal .err { color: #ff5050; }
+.terminal .ok { color: #50ff50; }
+.terminal input {
+  background: transparent;
+  border: none;
+  color: inherit;
+  font: inherit;
+  outline: none;
+  width: 70%;
+  padding: 0;
+}
+
+/* About window */
+.about {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 12px;
+  padding: 12px;
+}
+.about .avatar {
+  width: 64px;
+  height: 64px;
+  border-top: 2px solid var(--chrome-darker);
+  border-left: 2px solid var(--chrome-darker);
+  border-right: 2px solid var(--chrome-lightest);
+  border-bottom: 2px solid var(--chrome-lightest);
+  background: #fff center/cover no-repeat;
+  image-rendering: pixelated;
+}
+.about h2 { font-size: 16px; margin-bottom: 4px; }
+.about ul.links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+.about ul.links a { color: var(--link); text-decoration: underline; }
+
+/* Project card */
+.project-props { padding: 12px; }
+.project-props h2 { font-size: 14px; margin-bottom: 6px; }
+.project-props .meta { display: flex; gap: 12px; margin: 8px 0; font-size: 12px; color: #333; }
+.project-props .stars { font-weight: bold; }
+.project-props .desc { line-height: 1.5; margin-bottom: 12px; }
+
+/* Blog */
+.post-body { font-family: Georgia, "Times New Roman", serif; font-size: 14px; line-height: 1.6; color: #000; max-width: 64ch; }
+.post-body h1 { font-size: 22px; margin: 16px 0 8px; }
+.post-body h2 { font-size: 18px; margin: 16px 0 6px; }
+.post-body h3 { font-size: 16px; margin: 12px 0 4px; }
+.post-body p { margin: 8px 0; }
+.post-body code { background: #eee; padding: 1px 4px; font-family: "Consolas", monospace; font-size: 13px; }
+.post-body pre { background: #f5f5f5; padding: 8px; overflow: auto; }
+.post-body pre code { background: transparent; padding: 0; }
+.post-body a { color: var(--link); }
+.post-meta { color: #555; font-size: 12px; margin-bottom: 12px; }
+
+/* Loading */
+.loading { padding: 16px; text-align: center; color: #555; }

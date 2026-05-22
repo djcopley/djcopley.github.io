@@ -1,0 +1,16 @@
+{
+  "name": "Daniel Copley",
+  "username": "djcopley",
+  "headline": "Engineer. Tinkerer. Coffee enthusiast.",
+  "bio": [
+    "Hi — I'm Daniel. I build software for a living and for fun. I care about elegant systems, sharp tools, and shipping things that work.",
+    "When I'm not in front of a terminal I'm usually reading, brewing pour-over, or chasing some side project that's gotten out of hand.",
+    "This site is my front porch. Welcome."
+  ],
+  "links": [
+    { "label": "GitHub",   "url": "https://github.com/djcopley" },
+    { "label": "LinkedIn", "url": "https://www.linkedin.com/in/djcopley" },
+    { "label": "Twitter",  "url": "https://twitter.com/djrcopley" },
+    { "label": "Email",    "url": "mailto:hi@daniel.copley.dev" }
+  ]
+}

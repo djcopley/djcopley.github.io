@@ -1,0 +1,21 @@
+*, *::before, *::after { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; height: 100%; }
+body { font-family: "MS Sans Serif", "Tahoma", "Geneva", sans-serif; font-size: 12px; color: #000; -webkit-font-smoothing: none; font-smooth: never; }
+a { color: #0000ee; }
+button { font: inherit; }
+img { display: block; max-width: 100%; }
+ul, ol { margin: 0; padding: 0; list-style: none; }
+h1, h2, h3, h4, h5, h6, p { margin: 0; }
+:root {
+  --bg: #008080;
+  --chrome: #c0c0c0;
+  --chrome-dark: #808080;
+  --chrome-darker: #404040;
+  --chrome-light: #dfdfdf;
+  --chrome-lightest: #ffffff;
+  --title: #000080;
+  --title-text: #ffffff;
+  --title-inactive: #808080;
+  --text: #000000;
+  --link: #0000ee;
+}
