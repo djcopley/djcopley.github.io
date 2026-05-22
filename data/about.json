@@ -8,9 +8,7 @@
     "This site is my front porch. Welcome."
   ],
   "links": [
-    { "label": "GitHub",   "url": "https://github.com/djcopley" },
-    { "label": "LinkedIn", "url": "https://www.linkedin.com/in/djcopley" },
-    { "label": "Twitter",  "url": "https://twitter.com/djrcopley" },
-    { "label": "Email",    "url": "mailto:hi@daniel.copley.dev" }
+    { "label": "GitHub", "url": "https://github.com/djcopley" },
+    { "label": "Email",  "url": "mailto:hi@daniel.copley.dev" }
   ]
 }
